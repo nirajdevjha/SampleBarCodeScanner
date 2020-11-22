@@ -8,7 +8,7 @@
 		<string>Kissan Fruit Jam</string>
 		<key>productImg</key>
 		<string>jam</string>
-		<key>price</key>
+		<key>productPrice</key>
 		<integer>20</integer>
 	</dict>
 	<key>4902430908078</key>
@@ -17,7 +17,7 @@
 		<string>head&amp;shoulders Shampoo</string>
 		<key>productImg</key>
 		<string>shampoo</string>
-		<key>price</key>
+		<key>productPrice</key>
 		<integer>185</integer>
 	</dict>
 	<key>5449000000996</key>
@@ -26,7 +26,7 @@
 		<string>Coke</string>
 		<key>productImg</key>
 		<string>coke</string>
-		<key>price</key>
+		<key>productPrice</key>
 		<integer>40</integer>
 	</dict>
 	<key>8908000420748</key>
@@ -35,7 +35,7 @@
 		<string>Vinegar</string>
 		<key>productImg</key>
 		<string>vinegar</string>
-		<key>price</key>
+		<key>productPrice</key>
 		<integer>80</integer>
 	</dict>
 	<key>4796008920056</key>
@@ -44,7 +44,7 @@
 		<string>Real juice</string>
 		<key>productImg</key>
 		<string>real</string>
-		<key>price</key>
+		<key>productPrice</key>
 		<integer>99</integer>
 	</dict>
 </dict>

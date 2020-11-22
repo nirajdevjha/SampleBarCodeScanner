@@ -9,10 +9,10 @@
 import Foundation
 
 class CartListViewModel {
-    private var addedProductList: [Product]
+    private(set) var addedProductList: [Product]
     
     private(set) var rowModels = [CartListRowModel]()
-    private var totalPrice: Float = 0
+    private var totalPrice: Double = 0
     
     /// Output Callbacks
     var reloadTable: () -> () = {}
@@ -54,7 +54,7 @@ class CartListViewModel {
         return rowModels.count
     }
     
-    func carCellModel(at index: Int) -> CartListRowModel? {
+    func cartCellModel(at index: Int) -> CartListRowModel? {
         guard index < rowModels.count else { return nil }
         return rowModels[index]
     }
@@ -69,7 +69,7 @@ class CartListViewModel {
         }
     }
     
-    func updateTotalPrice(_ price: Float?) {
+    func updateTotalPrice(_ price: Double?) {
         guard let price = price else {
             return
         }

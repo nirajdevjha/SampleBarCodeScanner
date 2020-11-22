@@ -20,5 +20,5 @@ struct CartListItemRowModel: CartListRowModel {
     var rowType: CartListRowType
     let productName: String
     let imageName: String
-    let price: Float
+    let price: Double
 }

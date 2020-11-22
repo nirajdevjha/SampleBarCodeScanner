@@ -137,7 +137,7 @@ extension CartListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let model = viewModel.carCellModel(at: indexPath.row) else {
+        guard let model = viewModel.cartCellModel(at: indexPath.row) else {
             return UITableViewCell()
         }
         

@@ -11,11 +11,11 @@ import Foundation
 struct Product {
     let productName: String?
     let productImg: String? // can use image url instead from local
-    let productPrice: Float?
+    let productPrice: Double?
     
     init(dict: [String: Any]) {
         self.productName = dict["productName"] as? String
         self.productImg = dict["productImg"] as? String
-        self.productPrice = dict["price"] as? Float
+        self.productPrice = dict["productPrice"] as? Double
     }
 }

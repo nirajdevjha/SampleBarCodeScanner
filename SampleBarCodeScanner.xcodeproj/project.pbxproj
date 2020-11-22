@@ -31,6 +31,8 @@
 		40D4F02B256A967B00AD694A /* EmptyCartAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D4F029256A967B00AD694A /* EmptyCartAlert.xib */; };
 		40D4F02D256AA45A00AD694A /* PriceBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4F02C256AA45A00AD694A /* PriceBottomBarView.swift */; };
 		40D4F02F256AA4B200AD694A /* PriceBottomBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D4F02E256AA4B200AD694A /* PriceBottomBarView.xib */; };
+		40D4F031256ABA7600AD694A /* CartListingVMSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4F030256ABA7600AD694A /* CartListingVMSpec.swift */; };
+		40D4F033256ABBB000AD694A /* MockResourceUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4F032256ABBB000AD694A /* MockResourceUtility.swift */; };
 		EA7A5C94410F803207A95E13 /* libPods-SampleBarCodeScannerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 268EDCA3E619C55E0ADC4A1F /* libPods-SampleBarCodeScannerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		40D4F029256A967B00AD694A /* EmptyCartAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyCartAlert.xib; sourceTree = "<group>"; };
 		40D4F02C256AA45A00AD694A /* PriceBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceBottomBarView.swift; sourceTree = "<group>"; };
 		40D4F02E256AA4B200AD694A /* PriceBottomBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceBottomBarView.xib; sourceTree = "<group>"; };
+		40D4F030256ABA7600AD694A /* CartListingVMSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListingVMSpec.swift; sourceTree = "<group>"; };
+		40D4F032256ABBB000AD694A /* MockResourceUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResourceUtility.swift; sourceTree = "<group>"; };
 		58201D26937CC5B2B2E47C22 /* Pods-SampleBarCodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleBarCodeScanner.release.xcconfig"; path = "Target Support Files/Pods-SampleBarCodeScanner/Pods-SampleBarCodeScanner.release.xcconfig"; sourceTree = "<group>"; };
 		6D740B3F5053E7EF9F0EC2CB /* libPods-SampleBarCodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleBarCodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88693BB763C5110006F42FF /* Pods-SampleBarCodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleBarCodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-SampleBarCodeScanner/Pods-SampleBarCodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,8 +144,10 @@
 		40128009256A3ADB002CF5B9 /* SampleBarCodeScannerTests */ = {
 			isa = PBXGroup;
 			children = (
+				40D4F030256ABA7600AD694A /* CartListingVMSpec.swift */,
 				4012800A256A3ADB002CF5B9 /* SampleBarCodeScannerTests.swift */,
 				4012800C256A3ADB002CF5B9 /* Info.plist */,
+				40D4F032256ABBB000AD694A /* MockResourceUtility.swift */,
 			);
 			path = SampleBarCodeScannerTests;
 			sourceTree = "<group>";
@@ -455,7 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D4F033256ABBB000AD694A /* MockResourceUtility.swift in Sources */,
 				4012800B256A3ADB002CF5B9 /* SampleBarCodeScannerTests.swift in Sources */,
+				40D4F031256ABA7600AD694A /* CartListingVMSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,10 +655,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4G4Y5F4Y2;
 				INFOPLIST_FILE = SampleBarCodeScannerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,10 +679,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4G4Y5F4Y2;
 				INFOPLIST_FILE = SampleBarCodeScannerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
