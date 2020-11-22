@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ScannerVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScannerVC" id="BYZ-38-t0r" customClass="ScannerVC" customModule="SampleBarCodeScanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-ef-i74">
+                                <rect key="frame" x="150" y="728" width="114" height="44"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.93725490199999995" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3VN-ew-42b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.5450980392" green="0.3411764706" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVe-ih-tHb"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-KH-7Kt">
+                                <rect key="frame" x="20" y="54" width="374" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahs-3I-qpp" userLabel="Cart Button">
+                                        <rect key="frame" x="314" y="2" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Rhg-Y0-AEP"/>
+                                            <constraint firstAttribute="height" constant="40" id="cCX-Uf-IlE"/>
+                                        </constraints>
+                                        <state key="normal" image="cart"/>
+                                        <connections>
+                                            <action selector="didTapCartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zN6-Of-wUc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVL-gl-STE" userLabel="CartItemCountLbl">
+                                        <rect key="frame" x="346" y="5" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="KmM-va-eXA"/>
+                                            <constraint firstAttribute="width" constant="16" id="NlS-Hr-94a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="8"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XVL-gl-STE" secondAttribute="trailing" constant="12" id="4iI-QN-dXN"/>
+                                    <constraint firstItem="XVL-gl-STE" firstAttribute="top" secondItem="KfO-KH-7Kt" secondAttribute="top" constant="5" id="5nz-LD-ucv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ahs-3I-qpp" secondAttribute="trailing" constant="20" id="7aI-VY-crH"/>
+                                    <constraint firstItem="ahs-3I-qpp" firstAttribute="centerY" secondItem="KfO-KH-7Kt" secondAttribute="centerY" id="Hmi-Pb-Eea"/>
+                                    <constraint firstAttribute="height" constant="44" id="Mpe-45-syo"/>
+                                    <constraint firstItem="XVL-gl-STE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KfO-KH-7Kt" secondAttribute="leading" constant="20" symbolic="YES" id="e6u-at-dhN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhd-Ky-zus" userLabel="Acesss View">
+                                <rect key="frame" x="16" y="408" width="382" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please grant access to the camera for scanning barcodes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMF-gn-K9i">
+                                        <rect key="frame" x="8" y="15" width="366" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp2-8u-UGu">
+                                        <rect key="frame" x="135.5" y="40" width="111" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wgf-Bj-cob"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="GRANT ACCESS">
+                                            <color key="titleColor" red="0.5450980392" green="0.3411764706" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapGrantAccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opm-Ky-20e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lMF-gn-K9i" firstAttribute="leading" secondItem="mhd-Ky-zus" secondAttribute="leading" constant="8" id="Ef4-W0-r8a"/>
+                                    <constraint firstAttribute="height" constant="80" id="Hqp-UQ-NYP"/>
+                                    <constraint firstItem="lMF-gn-K9i" firstAttribute="top" secondItem="mhd-Ky-zus" secondAttribute="top" constant="15" id="LSs-t3-t52"/>
+                                    <constraint firstAttribute="bottom" secondItem="tp2-8u-UGu" secondAttribute="bottom" id="eyN-eK-Ztp"/>
+                                    <constraint firstAttribute="trailing" secondItem="lMF-gn-K9i" secondAttribute="trailing" constant="8" id="sWE-YX-zUt"/>
+                                    <constraint firstItem="tp2-8u-UGu" firstAttribute="centerX" secondItem="mhd-Ky-zus" secondAttribute="centerX" id="y4k-PE-mlW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KfO-KH-7Kt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GK5-IC-juF"/>
+                            <constraint firstItem="mhd-Ky-zus" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Obk-fH-MLo"/>
+                            <constraint firstItem="KfO-KH-7Kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OcJ-YF-C4a"/>
+                            <constraint firstItem="JJv-ef-i74" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vmo-1N-FNu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KfO-KH-7Kt" secondAttribute="trailing" constant="20" id="WsX-4m-qmO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mhd-Ky-zus" secondAttribute="trailing" constant="16" id="cl0-ET-4cr"/>
+                            <constraint firstItem="mhd-Ky-zus" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dF7-Dz-HGU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JJv-ef-i74" secondAttribute="bottom" constant="90" id="lOJ-bt-2Uy"/>
+                            <constraint firstItem="mhd-Ky-zus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rqa-ja-81F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="accessLbl" destination="lMF-gn-K9i" id="Its-RG-mrd"/>
+                        <outlet property="acessView" destination="mhd-Ky-zus" id="bE5-b9-iC4"/>
+                        <outlet property="cartBtn" destination="ahs-3I-qpp" id="lGU-BG-Ivf"/>
+                        <outlet property="cartItemCountLbl" destination="XVL-gl-STE" id="3W1-pK-baH"/>
+                        <outlet property="grantAccessBtn" destination="tp2-8u-UGu" id="yd1-Tz-Zh6"/>
+                        <outlet property="startBtn" destination="JJv-ef-i74" id="lrC-GG-xOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart" width="24" height="22"/>
+    </resources>
 </document>
