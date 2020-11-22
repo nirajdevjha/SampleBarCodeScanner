@@ -11,14 +11,23 @@
 		<key>price</key>
 		<string>₹ 40</string>
 	</dict>
-	<key>8717677334094</key>
+	<key>8908000420748</key>
 	<dict>
 		<key>productName</key>
-		<string>Chocolate</string>
+		<string>Vinegar</string>
 		<key>imageUrl</key>
-		<string></string>
+		<string>https://unsplash.com/photos/nWCmjC7dmdo</string>
 		<key>price</key>
-		<string>₹ 40</string>
+		<string>₹ 80</string>
+	</dict>
+	<key>8901571006885</key>
+	<dict>
+		<key>productName</key>
+		<string>Eno</string>
+		<key>imageUrl</key>
+		<string>https://unsplash.com/photos/nWCmjC7dmdo</string>
+		<key>price</key>
+		<string>₹ 5</string>
 	</dict>
 </dict>
 </plist>

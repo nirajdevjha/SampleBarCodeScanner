@@ -10,12 +10,10 @@ import Foundation
 
 class ScannerViewModel {
     
-    private var addedProductsToCart: [Product] = []
+    private(set) var addedProductsToCart: [Product] = []
     
     /// Output Callbacks
     var updateCartCount: (Int) -> () = {_ in}
-    var showActivityIndicator: () -> () = {}
-    var showErrorMessage: (String) -> () = { _ in }
     
     func addProductToCart(_ product: Product) {
         addedProductsToCart.append(product)

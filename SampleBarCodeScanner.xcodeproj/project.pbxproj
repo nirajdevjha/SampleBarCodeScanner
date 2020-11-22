@@ -20,6 +20,11 @@
 		40128025256A4290002CF5B9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40128023256A4290002CF5B9 /* UIView+Extension.swift */; };
 		40128027256A480A002CF5B9 /* ProductInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40128026256A480A002CF5B9 /* ProductInfo.plist */; };
 		4012802A256A5CA0002CF5B9 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40128029256A5CA0002CF5B9 /* ScannerViewModel.swift */; };
+		40128031256A6ECC002CF5B9 /* CartListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40128030256A6ECC002CF5B9 /* CartListVC.swift */; };
+		40128033256A6EE4002CF5B9 /* CartListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40128032256A6EE4002CF5B9 /* CartListViewModel.swift */; };
+		40128035256A7073002CF5B9 /* CartListCellModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40128034256A7073002CF5B9 /* CartListCellModels.swift */; };
+		40128039256A7529002CF5B9 /* CartItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40128037256A7529002CF5B9 /* CartItemTVC.swift */; };
+		4012803A256A7529002CF5B9 /* CartItemTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40128038256A7529002CF5B9 /* CartItemTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		40128023256A4290002CF5B9 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		40128026256A480A002CF5B9 /* ProductInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProductInfo.plist; sourceTree = "<group>"; };
 		40128029256A5CA0002CF5B9 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		40128030256A6ECC002CF5B9 /* CartListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListVC.swift; sourceTree = "<group>"; };
+		40128032256A6EE4002CF5B9 /* CartListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewModel.swift; sourceTree = "<group>"; };
+		40128034256A7073002CF5B9 /* CartListCellModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListCellModels.swift; sourceTree = "<group>"; };
+		40128037256A7529002CF5B9 /* CartItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTVC.swift; sourceTree = "<group>"; };
+		40128038256A7529002CF5B9 /* CartItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				40128016256A3EEB002CF5B9 /* Scanner */,
+				4012802C256A6E8C002CF5B9 /* CartList */,
 				40128017256A3EF4002CF5B9 /* Scanned Product */,
 			);
 			path = Features;
@@ -179,6 +190,50 @@
 				40128029256A5CA0002CF5B9 /* ScannerViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4012802C256A6E8C002CF5B9 /* CartList */ = {
+			isa = PBXGroup;
+			children = (
+				40128036256A707A002CF5B9 /* Models */,
+				4012802F256A6EA9002CF5B9 /* Views */,
+				4012802E256A6EA0002CF5B9 /* View Model */,
+				4012802D256A6E9A002CF5B9 /* Controller */,
+			);
+			path = CartList;
+			sourceTree = "<group>";
+		};
+		4012802D256A6E9A002CF5B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40128030256A6ECC002CF5B9 /* CartListVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4012802E256A6EA0002CF5B9 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				40128032256A6EE4002CF5B9 /* CartListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4012802F256A6EA9002CF5B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40128037256A7529002CF5B9 /* CartItemTVC.swift */,
+				40128038256A7529002CF5B9 /* CartItemTVC.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40128036256A707A002CF5B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40128034256A7073002CF5B9 /* CartListCellModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +321,7 @@
 				40127FFD256A3ADB002CF5B9 /* Assets.xcassets in Resources */,
 				40128027256A480A002CF5B9 /* ProductInfo.plist in Resources */,
 				40127FFB256A3ADA002CF5B9 /* Main.storyboard in Resources */,
+				4012803A256A7529002CF5B9 /* CartItemTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +342,14 @@
 				40127FF8256A3ADA002CF5B9 /* ScannerVC.swift in Sources */,
 				40128025256A4290002CF5B9 /* UIView+Extension.swift in Sources */,
 				4012801D256A40E0002CF5B9 /* ProductList.swift in Sources */,
+				40128035256A7073002CF5B9 /* CartListCellModels.swift in Sources */,
+				40128031256A6ECC002CF5B9 /* CartListVC.swift in Sources */,
 				4012801B256A3F33002CF5B9 /* Product.swift in Sources */,
+				40128039256A7529002CF5B9 /* CartItemTVC.swift in Sources */,
 				40128024256A4290002CF5B9 /* UIAlertController+Alert.swift in Sources */,
 				40127FF4256A3ADA002CF5B9 /* AppDelegate.swift in Sources */,
 				40127FF6256A3ADA002CF5B9 /* SceneDelegate.swift in Sources */,
+				40128033256A6EE4002CF5B9 /* CartListViewModel.swift in Sources */,
 				4012802A256A5CA0002CF5B9 /* ScannerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -436,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -151,12 +151,13 @@ class ScannerVC: UIViewController {
         captureSession.startRunning()
     }
     
-    private func showInfo(for payload: String) {
+    private func processScannedInfo(for payload: String) {
         if let product = productCatalog.product(forKey: payload) {
             debugPrint(payload)
             UIAlertController.showAlert(
             from: self,
             title: product.productName ?? "No product name provided", msg: payload)
+            //add product to cart
             viewModel.addProductToCart(product)
             
         } else {
@@ -175,11 +176,11 @@ class ScannerVC: UIViewController {
         DispatchQueue.main.async {
             if let bestResult = request.results?.first as? VNBarcodeObservation,
                 let payload = bestResult.payloadStringValue {
-                self.showInfo(for: payload)
+                self.processScannedInfo(for: payload)
             } else {
                 UIAlertController.showAlert(
                     from: self,
-                    title: "Unable to extract results", msg: "Cannot extract barcode information from dat")
+                    title: "Unable to extract results", msg: "Cannot extract barcode information")
             }
         }
     }
@@ -192,7 +193,10 @@ class ScannerVC: UIViewController {
     
     @IBAction
     private func didTapCartButton(_ sender: UIButton) {
-        
+        let cartVM = CartListViewModel(addedProductList: viewModel.addedProductsToCart)
+        let cartVC = CartListVC(viewModel: cartVM)
+        let navController = UINavigationController(rootViewController: cartVC)
+        present(navController, animated: true)
     }
     
     @IBAction
