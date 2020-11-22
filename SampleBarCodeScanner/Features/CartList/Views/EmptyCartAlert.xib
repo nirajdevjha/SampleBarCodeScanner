@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gyP-Q5-3LU" customClass="EmptyCartAlert" customModule="SampleBarCodeScanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZI-fh-wPd" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cart is Empty!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM8-5r-xqz" userLabel="ctrip alert msg label">
+                            <rect key="frame" x="122" y="12" width="170" height="21.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.54509803921568623" green="0.3411764705882353" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJH-4U-xCm">
+                            <rect key="frame" x="129.5" y="43.5" width="155" height="34"/>
+                            <color key="backgroundColor" red="0.81568627450980391" green="0.93725490196078431" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Fgc-em-xop"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                            <state key="normal" title="SCAN NOW">
+                                <color key="titleColor" red="0.5450980392" green="0.3411764706" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapScan:" destination="gyP-Q5-3LU" eventType="touchUpInside" id="x3f-xy-KDc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QM8-5r-xqz" firstAttribute="centerX" secondItem="GZI-fh-wPd" secondAttribute="centerX" id="1tZ-ss-ayu"/>
+                        <constraint firstItem="QM8-5r-xqz" firstAttribute="top" secondItem="GZI-fh-wPd" secondAttribute="top" constant="12" id="LnF-SL-ZMq"/>
+                        <constraint firstItem="EJH-4U-xCm" firstAttribute="centerX" secondItem="GZI-fh-wPd" secondAttribute="centerX" id="YKa-fP-Hcg"/>
+                        <constraint firstItem="EJH-4U-xCm" firstAttribute="top" secondItem="QM8-5r-xqz" secondAttribute="bottom" constant="10" id="c5X-Aa-okV"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QM8-5r-xqz" secondAttribute="trailing" constant="10" id="rPL-GL-4DB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="bottom" secondItem="vcF-Fs-4py" secondAttribute="bottom" id="1hL-bm-sv1"/>
+                <constraint firstItem="vcF-Fs-4py" firstAttribute="trailing" secondItem="GZI-fh-wPd" secondAttribute="trailing" id="BKg-MK-XyH"/>
+                <constraint firstAttribute="bottom" secondItem="GZI-fh-wPd" secondAttribute="bottom" id="Jij-RU-vXH"/>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="leading" secondItem="vcF-Fs-4py" secondAttribute="leading" id="f7G-9H-Qez"/>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="top" secondItem="gyP-Q5-3LU" secondAttribute="top" id="vZC-oM-GcG"/>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="trailing" secondItem="vcF-Fs-4py" secondAttribute="trailing" id="wB4-XQ-DnY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vcF-Fs-4py"/>
+            <connections>
+                <outlet property="msgLbl" destination="QM8-5r-xqz" id="dCe-NV-a5h"/>
+                <outlet property="scanBtn" destination="EJH-4U-xCm" id="7tu-3t-G6y"/>
+            </connections>
+            <point key="canvasLocation" x="311.59420289855075" y="-441.29464285714283"/>
+        </view>
+    </objects>
+</document>

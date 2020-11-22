@@ -19,4 +19,9 @@ class ScannerViewModel {
         addedProductsToCart.append(product)
         updateCartCount(addedProductsToCart.count)
     }
+    
+    func removeAllProds() {
+        addedProductsToCart.removeAll()
+        updateCartCount(addedProductsToCart.count)
+    }
 }

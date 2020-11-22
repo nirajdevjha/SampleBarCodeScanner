@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-ef-i74">
-                                <rect key="frame" x="150" y="728" width="114" height="44"/>
+                                <rect key="frame" x="153" y="728" width="108" height="44"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.93725490199999995" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3VN-ew-42b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
-                                <state key="normal" title="START">
+                                <state key="normal" title="SCAN">
                                     <color key="titleColor" red="0.5450980392" green="0.3411764706" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

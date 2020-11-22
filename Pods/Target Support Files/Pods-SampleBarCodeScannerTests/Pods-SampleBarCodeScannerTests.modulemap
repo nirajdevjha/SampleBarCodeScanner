@@ -1,0 +1,6 @@
+module Pods_SampleBarCodeScannerTests {
+  umbrella header "Pods-SampleBarCodeScannerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

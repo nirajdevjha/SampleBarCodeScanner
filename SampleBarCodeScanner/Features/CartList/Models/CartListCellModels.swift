@@ -14,12 +14,11 @@ protocol CartListRowModel {
 
 enum CartListRowType {
     case cartItem
-    case cartCTA
 }
 
 struct CartListItemRowModel: CartListRowModel {
     var rowType: CartListRowType
     let productName: String
-    let imageUrl: String
-    let price: String
+    let imageName: String
+    let price: Float
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gyP-Q5-3LU" customClass="PriceBottomBarView" customModule="SampleBarCodeScanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZI-fh-wPd" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvP-j7-hQQ">
+                            <rect key="frame" x="0.0" y="83" width="414" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJH-4U-xCm">
+                            <rect key="frame" x="257" y="9.5" width="139" height="34"/>
+                            <color key="backgroundColor" red="0.81568627450980391" green="0.93725490196078431" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="IkW-FJ-Ii3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <inset key="contentEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                            <state key="normal" title="PAY NOW">
+                                <color key="titleColor" red="0.5450980392" green="0.3411764706" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapPayNow:" destination="gyP-Q5-3LU" eventType="touchUpInside" id="sOF-6z-7V6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹ 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB7-ea-aH3">
+                            <rect key="frame" x="16" y="16" width="45" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="aB7-ea-aH3" firstAttribute="leading" secondItem="GZI-fh-wPd" secondAttribute="leading" constant="16" id="EiU-na-7bZ"/>
+                        <constraint firstItem="aB7-ea-aH3" firstAttribute="centerY" secondItem="EJH-4U-xCm" secondAttribute="centerY" id="bGe-kK-Zo0"/>
+                        <constraint firstAttribute="trailing" secondItem="EJH-4U-xCm" secondAttribute="trailing" constant="18" id="d1y-By-T4v"/>
+                        <constraint firstItem="EJH-4U-xCm" firstAttribute="centerY" secondItem="GZI-fh-wPd" secondAttribute="centerY" id="tEz-D0-djL"/>
+                        <constraint firstItem="EJH-4U-xCm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aB7-ea-aH3" secondAttribute="trailing" constant="10" id="xcH-gv-gMd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="leading" secondItem="vcF-Fs-4py" secondAttribute="leading" id="69y-Xd-qlU"/>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="bottom" secondItem="vcF-Fs-4py" secondAttribute="bottom" id="6QV-mk-kPm"/>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="trailing" secondItem="vcF-Fs-4py" secondAttribute="trailing" id="Hx6-VF-m9f"/>
+                <constraint firstItem="GZI-fh-wPd" firstAttribute="top" secondItem="gyP-Q5-3LU" secondAttribute="top" id="tGf-4z-PWu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vcF-Fs-4py"/>
+            <connections>
+                <outlet property="payNowBtn" destination="EJH-4U-xCm" id="rwo-89-jkl"/>
+                <outlet property="priceLbl" destination="aB7-ea-aH3" id="RmO-aV-zhc"/>
+            </connections>
+            <point key="canvasLocation" x="311.59420289855075" y="-451.67410714285711"/>
+        </view>
+    </objects>
+</document>

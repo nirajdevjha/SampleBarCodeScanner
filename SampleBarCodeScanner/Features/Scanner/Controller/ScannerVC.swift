@@ -68,6 +68,8 @@ class ScannerVC: UIViewController {
         acessView.isHidden = true
         cartBtn.isHidden = true
         cartItemCountLbl.isHidden = true
+        cartBtn.setImage(UIImage(named: "cart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        cartBtn.tintColor = .white
     }
     
     private func checkPermissions() {
@@ -194,8 +196,9 @@ class ScannerVC: UIViewController {
     @IBAction
     private func didTapCartButton(_ sender: UIButton) {
         let cartVM = CartListViewModel(addedProductList: viewModel.addedProductsToCart)
-        let cartVC = CartListVC(viewModel: cartVM)
+        let cartVC = CartListVC(viewModel: cartVM, delegate: self)
         let navController = UINavigationController(rootViewController: cartVC)
+        navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true)
     }
     
@@ -230,5 +233,11 @@ extension ScannerVC: AVCapturePhotoCaptureDelegate {
                 }
             }
         }
+    }
+}
+
+extension ScannerVC: CartListVCProtocol {
+    func updateProducts() {
+        viewModel.removeAllProds()
     }
 }

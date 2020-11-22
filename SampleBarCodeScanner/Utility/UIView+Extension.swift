@@ -53,4 +53,40 @@ extension UIView {
             layer.masksToBounds = newCornerRadius > 0
         }
     }
+    
+    func addtShadow(requirePath: Bool = true, opacity: Float = 0.2) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = 2.0
+        if requirePath {
+            self.layer.shadowPath = UIBezierPath(roundedRect: layer.bounds, cornerRadius: self.layer.cornerRadius == 0 ? 4.0 : self.layer.cornerRadius).cgPath
+        }
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = UIScreen.main.scale
+    }
+    
+}
+
+
+public protocol NibLoadableView: class { }
+
+public extension NibLoadableView {
+    static var nibN: String {
+        return String(describing: self)
+    }
+    
+    static func loadFromNib(bundle: Bundle? = nil) -> Self {
+        let nib = UINib(nibName: nibN, bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil).first as! Self
+    }
+}
+
+extension UIView: NibLoadableView {}
+
+extension UIView {
+    class func loadfromNib<T: UIView>() -> T {
+        return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)?[0] as! T
+    }
 }

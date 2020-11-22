@@ -10,12 +10,12 @@ import Foundation
 
 struct Product {
     let productName: String?
-    let productImgUrl: String?
-    let productPrice: String?
+    let productImg: String? // can use image url instead from local
+    let productPrice: Float?
     
     init(dict: [String: Any]) {
         self.productName = dict["productName"] as? String
-        self.productImgUrl = dict["imageUrl"] as? String
-        self.productPrice = dict["price"] as? String
+        self.productImg = dict["productImg"] as? String
+        self.productPrice = dict["price"] as? Float
     }
 }

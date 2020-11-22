@@ -2,32 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>8901030758102</key>
+	<dict>
+		<key>productName</key>
+		<string>Kissan Fruit Jam</string>
+		<key>productImg</key>
+		<string>jam</string>
+		<key>price</key>
+		<integer>20</integer>
+	</dict>
+	<key>4902430908078</key>
+	<dict>
+		<key>productName</key>
+		<string>head&amp;shoulders Shampoo</string>
+		<key>productImg</key>
+		<string>shampoo</string>
+		<key>price</key>
+		<integer>185</integer>
+	</dict>
 	<key>5449000000996</key>
 	<dict>
 		<key>productName</key>
 		<string>Coke</string>
-		<key>imageUrl</key>
-		<string>https://unsplash.com/photos/nWCmjC7dmdo</string>
+		<key>productImg</key>
+		<string>coke</string>
 		<key>price</key>
-		<string>₹ 40</string>
+		<integer>40</integer>
 	</dict>
 	<key>8908000420748</key>
 	<dict>
 		<key>productName</key>
 		<string>Vinegar</string>
-		<key>imageUrl</key>
-		<string>https://unsplash.com/photos/nWCmjC7dmdo</string>
+		<key>productImg</key>
+		<string>vinegar</string>
 		<key>price</key>
-		<string>₹ 80</string>
+		<integer>80</integer>
 	</dict>
-	<key>8901571006885</key>
+	<key>4796008920056</key>
 	<dict>
 		<key>productName</key>
-		<string>Eno</string>
-		<key>imageUrl</key>
-		<string>https://unsplash.com/photos/nWCmjC7dmdo</string>
+		<string>Real juice</string>
+		<key>productImg</key>
+		<string>real</string>
 		<key>price</key>
-		<string>₹ 5</string>
+		<integer>99</integer>
 	</dict>
 </dict>
 </plist>
